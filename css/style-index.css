@@ -21,7 +21,8 @@ h4{
 }
 
 h5{
-	font-size:  25px;
+	font-family: 'Patrick Hand SC', sans-serif;
+	font-size:  30px;
 }
 
 h6{
@@ -74,7 +75,7 @@ h6:hover{
 	font-size: 0px;
 	position: relative;
 	top: 90%;
-	transform: translateY(-100%);
+	transform: translateY(-115%);
 }
 
 .col-8{
@@ -117,7 +118,7 @@ h6:hover{
 }
 
 .card-img-overlay:hover>h5{
-	font-size: 27px;
+	font-size: 32px;
 	color:  red;
 }
 
@@ -130,8 +131,15 @@ h6:hover{
 	background-color: black;
 }
 
-@media only screen and (max-width: 1100px) {
-	
+@media only screen and (max-width: 1120px) {
+	.col-8{
+		width: 100%;
+		min-width: 0%;
+	}
+
+	.content{
+		width: 100%
+	}
 	/*
 	#carousel{
     	width: 0;
