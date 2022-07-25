@@ -1,0 +1,72 @@
+h2{
+	font-size: 30px;
+	font-family: 'Patrick Hand SC', sans-serif;
+}
+
+h4{
+	right: 100%;
+	transform: translateX(130%);
+}
+
+.dados,.pedidos{
+	background:  #fff;
+	border: 1px solid black;
+	text-align: left;
+	padding: 10px;
+	margin: 5px;
+	border-radius: 10px;
+}
+
+.pedidos{
+	min-width: 322px;
+}
+
+.pedidos>button{
+	position: relative;
+	top: 45%;
+	left: 50%;
+}
+
+.btn-qtde{
+	position: relative;
+	top: 50px;
+	width: 100px;
+	text-align: center;
+	font-size: 20px;
+}
+
+.btn-qtde-btn{
+	background: #DC3545;
+	color: white;
+	height: 33px;
+	border-radius: 10px;
+}
+
+.btn-qtde-btn:hover{
+	background: #AC3545;
+	cursor: pointer;
+}
+
+.navbar-brand{
+	font-size: 40px;
+	font-family: 'Patrick Hand SC', sans-serif;
+}
+
+.carousel-inner{
+	border-radius: 10px;
+}
+
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+	justify-content: center;
+}
+
+@media only screen and (max-width: 991px) {
+	.pedidos>button{
+		top: 0%;
+		left: 0%;
+	}
+	/*
+	#carousel{
+    	width: 0;
+	}*/
+}

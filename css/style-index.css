@@ -1,0 +1,139 @@
+h2{
+	font-size: 40px;
+	font-family: 'Patrick Hand SC', sans-serif;
+}
+
+h3{
+	font-family: 'Patrick Hand SC', sans-serif;
+	font-size: 22px;
+	color: black;
+	margin-left: 18px;
+}
+h3:hover{
+	font-size: 23px;
+	color: #b00;
+	cursor: pointer;
+}
+
+h4{
+	left: 100%;
+	transform: translateX(-130%);
+}
+
+h5{
+	font-size:  25px;
+}
+
+h6{
+	font-size: 25px;
+	font-family: 'Patrick Hand SC', sans-serif;
+	position: absolute;
+	right: 100%;
+	transform: translateX(130%);
+}
+
+h6:hover{ 
+	font-size: 28px;
+	color: red;
+	cursor: pointer;
+}
+
+.collapse, .collapsing{
+	background: #ccc;
+}
+
+.cardapio{
+	background-color: #fff;
+	border-radius: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.pedidos>button{
+	position: relative;
+	top: 45%;
+	left: 50%;
+}
+
+.box{
+	margin-top:  10px;
+}
+
+.box-sobre{
+	margin-top: 30px;
+	font-size: 18px;
+	text-align: justify;
+}
+
+.content{
+	position: absolute;
+	left: 50%;
+}
+
+.descricao{
+	font-size: 0px;
+	position: relative;
+	top: 90%;
+	transform: translateY(-100%);
+}
+
+.col-8{
+	min-width: 1100px;
+}
+.navbar-brand{
+	font-size: 40px;
+	font-family: 'Patrick Hand SC', sans-serif;
+}
+
+.navbar-toggler{
+	position: absolute;
+	right: 100%;
+	transform: translateX(130%);
+}
+
+.p-4{
+	display: flex;
+}
+
+.row{
+	transform: translateX(-50%);
+}
+
+.card{
+	margin-left: 50px;
+	margin-right: 50px;
+	border-radius: 10px;
+}
+
+.card-group{
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+	justify-content: center;
+}
+
+.card-img-overlay:hover>h5{
+	font-size: 27px;
+	color:  red;
+}
+
+.card-img-overlay:hover{
+	cursor:  pointer;
+}
+
+.card-img-overlay:hover>.descricao{
+	font-size: 16px;
+	background-color: black;
+}
+
+@media only screen and (max-width: 1100px) {
+	
+	/*
+	#carousel{
+    	width: 0;
+	}*/
+}
