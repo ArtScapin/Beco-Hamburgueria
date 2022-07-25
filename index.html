@@ -7,11 +7,12 @@
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/style-index.css">
 	<title>Beco Hamburgueria</title>
 </head>
-<body>
+<body onresize="resize()">
 	<div class="collapse" id="navbarToggleExternalContent">
   		<div class="p-4" onclick="document.getElementById('navbarToggleExternalContent').classList.remove('show')">
   			<h3 onclick="window.location.href = 'secoes/pedidos.html'">Fazer meu pedido!</h3>
@@ -31,7 +32,6 @@
 	</nav>
 	<div class="content">
 		<div class="row box">
-			<!-- <div class="col-2"></div> -->
 			<div class="col-8">
 				<div id="carousel" class="carousel slide" data-bs-ride="carousel">
   					<div class="carousel-inner">
@@ -44,19 +44,15 @@
   					</div>
 				</div>
 			</div>
-			<!-- <div class="col-2"></div> -->
 		</div>
 		<div class="row box">
-			<!-- <div class="col-2"></div> -->
 			<div class="cardapio col-8">
 				<h2 id="cdp">Cardápio</h2>
 			</div>
-			<!-- <div class="col-2"></div> -->
 		</div>
 		<div class="row box">
-			<!-- <div class="col-2"></div> -->
 			<div class="cardapio itens col-8">
-				<div class="card-group">
+				<div class="card-group" id="ocultar1">
   					<div class="card text-bg-dark" onclick="irCarrinho(1)">
     					<img src="imagens/hamburguer1.jpg" class="card-img" alt="...">
     					<div class="card-img-overlay">
@@ -80,19 +76,15 @@
   					</div>
 				</div>
 			</div>
-			<!-- <div class="col-2"></div> -->
 		</div>
 		<div class="row box">
-			<!-- <div class="col-2"></div> -->
 			<div class="cardapio col-8">
-				<h3 id="cbs"><b>Combos</b></h3>
+				<h5 id="cbs"><b>Combos</b></h5>
 			</div>
-			<!-- <div class="col-2"></div> -->
 		</div>
 		<div class="row box">
-			<!-- <div class="col-2"></div> -->
 			<div class="cardapio itens col-8">
-				<div class="card-group">
+				<div class="card-group" id="ocultar2">
   					<div class="card text-bg-dark" onclick="irCarrinho(4)">
     					<img src="imagens/combo1.jpg" class="card-img" alt="...">
     					<div class="card-img-overlay">
@@ -116,15 +108,12 @@
   					</div>
 				</div>
 			</div>
-			<!-- <div class="col-2"></div> -->
 		</div>
 		<div class="row box-sobre">
-			<!-- <div class="col-2"></div> -->
 			<div class="cardapio col-8">
 				<h2 id="qsm">Quem Somos?</h2>
 				<p>Somos uma Rede Gourmet diferenciada e exclusiva. Trabalhamos apenas com ingredientes de primeira qualidade e alto padrão. Aqui na Beco você irá se deliciar com hambúrgueres suculentos e saborosos, preparados na hora, fresquinhos e de dar água na boca.</p>
 			</div>
-			<!-- <div class="col-2"></div> -->
 		</div>
 	</div>
 	<script src="js/script.js"></script>
