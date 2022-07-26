@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style-index.css">
 	<title>Beco Hamburgueria</title>
 </head>
-<body onresize="resize()">
+<body onresize="removeOculto()">
 	<div class="collapse" id="navbarToggleExternalContent">
   		<div class="p-4" onclick="document.getElementById('navbarToggleExternalContent').classList.remove('show')">
   			<h3 onclick="window.location.href = 'secoes/pedidos.html'">Fazer meu pedido!</h3>
@@ -23,7 +23,7 @@
 	</div>
 	<nav class="navbar bg-light">
   		<div class="container-fluid">
-    		<h1 class="navbar-brand">Beco Hamburgueria</h1>
+    		<h1 class="navbar-brand" id="nomeEmpresa">Beco Hamburgueria</h1>
     		<h4 onclick="window.location.href = 'secoes/pedidos.html'">Pedir</h4>
 	    	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
       			<span class="navbar-toggler-icon"></span>
@@ -40,6 +40,9 @@
     					</div>
     					<div class="carousel-item" data-bs-interval="3000">
       						<img src="imagens/outdor2.jpg" class="d-block w-100" alt="...">
+    					</div>
+    					<div class="carousel-item" data-bs-interval="3000">
+      						<img src="imagens/outdor3.jpg" class="d-block w-100" alt="...">
     					</div>
   					</div>
 				</div>
@@ -75,6 +78,29 @@
     					</div>
   					</div>
 				</div>
+				<div id="ocultar3" class="Lista">
+  					<div onclick="irCarrinho(1)" class="item-lista">
+    					<img class="imagens-itens" src="imagens/hamburguer1.jpg" alt="...">
+    					<div class="atributos-itens">
+    						<h5 class="title-itens">Beco Diagonal</h5>
+      						<p class="descricao">Pão preto, Maionese, Frango empanado, Queijo, Bacon, Picles, Cebola e Ketchup</p>
+    					</div>
+  					</div>
+  					<div onclick="irCarrinho(2)" class="item-lista">
+    					<img class="imagens-itens" src="imagens/hamburguer2.jpg" alt="...">
+    					<div class="atributos-itens">
+    						<h5 class="title-itens">Super Burguer</h5>
+      						<p class="descricao">Pão cervejinha, Maionese, Alface, Hamburguer, Queijo, Tomate, Cebola e Ketchup</p>
+    					</div>
+  					</div>
+  					<div onclick="irCarrinho(3)" class="item-lista">
+    					<img class="imagens-itens" src="imagens/hamburguer3.jpg" alt="...">
+    					<div class="atributos-itens">
+      						<h5 class="title-itens">Bacon 360</h5>
+      						<p class="descricao">Pão, Alface, Ketchup, Hamburguer, Cheddar, Tomate, Picles, Bacon e Cebola</p>
+    					</div>
+  					</div>
+  				</div>
 			</div>
 		</div>
 		<div class="row box">
@@ -107,6 +133,29 @@
     					</div>
   					</div>
 				</div>
+				<div id="ocultar4" class="Lista">
+  					<div onclick="irCarrinho(4)" class="item-lista">
+    					<img class="imagens-itens" src="imagens/hamburguer1.jpg" alt="...">
+    					<div class="atributos-itens">
+    						<h5 class="title-itens">Combo Diagonal</h5>
+      						<p class="descricao">Hamburguer Beco Diagonal + Refrigerante + Fritas</p>
+    					</div>
+  					</div>
+  					<div onclick="irCarrinho(5)" class="item-lista">
+    					<img class="imagens-itens" src="imagens/hamburguer2.jpg" alt="...">
+    					<div class="atributos-itens">
+    						<h5 class="title-itens">Super Combo</h5>
+      						<p class="descricao">Hamburguer Bacon 360 + Refrigerante + Fritas</p>
+    					</div>
+  					</div>
+  					<div onclick="irCarrinho(6)" class="item-lista">
+    					<img class="imagens-itens img-fluid" src="imagens/hamburguer3.jpg" alt="...">
+    					<div class="atributos-itens">
+      						<h5 class="title-itens">Combo 360</h5>
+      						<p class="descricao">Hamburguer Bacon 360 + Refrigerante + Fritas</p>
+    					</div>
+  					</div>
+  				</div>
 			</div>
 		</div>
 		<div class="row box-sobre">
@@ -114,6 +163,11 @@
 				<h2 id="qsm">Quem Somos?</h2>
 				<p>Somos uma Rede Gourmet diferenciada e exclusiva. Trabalhamos apenas com ingredientes de primeira qualidade e alto padrão. Aqui na Beco você irá se deliciar com hambúrgueres suculentos e saborosos, preparados na hora, fresquinhos e de dar água na boca.</p>
 			</div>
+		</div>
+		<div class="row box footer">
+			<h7>Beco Hamburgueria Ltda</h7>
+			<h7>Av. Rodolfo Behr, 1630 - Camobi, Santa Maria - RS, 97105-440</h7>
+			<h7>(55) 99106-9607	</h7>
 		</div>
 	</div>
 	<script src="js/script.js"></script>
