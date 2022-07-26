@@ -66,6 +66,16 @@ h6:hover{
 	text-align: justify;
 }
 
+.footer{
+	background: white;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	display: block;
+	font-family: 'Patrick Hand SC', sans-serif;
+	font-size: 20px;
+	margin-top: 20px;
+}
+
 .content{
 	position: absolute;
 	left: 50%;
@@ -130,6 +140,9 @@ h6:hover{
 	font-size: 16px;
 	background-color: black;
 }
+.carousel-inner{
+	border-radius: 15px;
+}
 
 @media only screen and (max-width: 1120px) {
 	.col-8{
@@ -137,8 +150,55 @@ h6:hover{
 		min-width: 0%;
 	}
 
+	.cardapio{
+		padding: 0;
+	}
 	.content{
 		width: 100%
+	}
+
+	.Lista{
+		text-align: left;
+	}
+
+	.item-lista{
+		display: flex;
+		margin: 10px;
+		border-radius: 15px;
+	}
+
+	.item-lista:hover{
+		background: #eee;
+		color: red;
+	}
+
+	.imagens-itens{
+		max-width: 170px;
+		max-height: 170px;
+		border-radius: 15px;
+	}
+
+	.title-itens{
+		width: 180px;
+	}
+
+	.descricao{
+		font-size: 16px;
+		position: unset;
+		top: 20%;
+		transform: translate(0px, 0px);
+	}
+
+	.atributos-itens{
+		margin: 10px;
+	}
+
+	.content:first-child{
+		margin-top: 0px;
+	}
+
+	.footer{
+		display: flex;
 	}
 	/*
 	#carousel{
