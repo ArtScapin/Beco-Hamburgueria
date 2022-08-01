@@ -31,7 +31,9 @@ if (arquivo === 'index') {
 		window.location.href = "secoes/pedidos.html?opcao="+String(opcao);
 	}
 
-
+	function recolherNav(){
+		$("#navbarToggleExternalContent").removeClass("show");
+	}
 
 }else if (arquivo === 'pedidos'){
 	const urlParams = new URLSearchParams(window.location.search);
