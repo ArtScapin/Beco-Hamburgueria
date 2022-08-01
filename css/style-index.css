@@ -136,6 +136,12 @@ p{
 	}
 }
 
+@media only screen and (max-width: 480px) {
+	.p-4{
+		display: block;
+	}
+}
+
 @media only screen and (max-width: 380px) {
 	.item-lista{
 		display: block;
