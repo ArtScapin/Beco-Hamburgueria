@@ -1,99 +1,24 @@
-h2{
-	font-size: 40px;
-	font-family: 'Patrick Hand SC', sans-serif;
-}
-
-h3{
-	font-family: 'Patrick Hand SC', sans-serif;
-	font-size: 22px;
-	color: black;
-	margin-left: 18px;
-}
-h3:hover{
-	font-size: 23px;
-	color: #b00;
-	cursor: pointer;
-}
-
 h4{
 	left: 100%;
 	transform: translateX(-130%);
 }
 
 h5{
-	font-family: 'Patrick Hand SC', sans-serif;
-	font-size:  30px;
+	font-size: 30px;
 }
 
-h6{
-	font-size: 25px;
-	font-family: 'Patrick Hand SC', sans-serif;
-	position: absolute;
-	right: 100%;
-	transform: translateX(130%);
+p{
+	font-size: 16px;
+	font-family: Arial, sans-serif;
+	margin-bottom: 0px;
 }
 
-h6:hover{ 
-	font-size: 28px;
-	color: red;
-	cursor: pointer;
+.p-4{
+	display: flex;
 }
 
-.collapse, .collapsing{
-	background: #ccc;
-}
-
-.cardapio{
-	background-color: #fff;
-	border-radius: 10px;
-	padding-left: 20px;
-	padding-right: 20px;
-}
-
-.pedidos>button{
-	position: relative;
-	top: 45%;
-	left: 50%;
-}
-
-.box{
-	margin-top:  10px;
-}
-
-.box-sobre{
-	margin-top: 30px;
-	font-size: 18px;
-	text-align: justify;
-}
-
-.footer{
-	background: white;
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
-	display: block;
-	font-family: 'Patrick Hand SC', sans-serif;
-	font-size: 20px;
-	margin-top: 20px;
-}
-
-.content{
-	position: absolute;
-	left: 50%;
-}
-
-.descricao{
-	font-size: 0px;
-	position: relative;
-	top: 90%;
-	transform: translateY(-115%);
-}
-
-.col-8{
-	min-width: 1100px;
-}
-.navbar-brand{
-	font-size: 40px;
-	font-family: 'Patrick Hand SC', sans-serif;
+#navbarToggleExternalContent{
+	background-image: linear-gradient(180deg, #ddd, #f8f9fa);
 }
 
 .navbar-toggler{
@@ -102,12 +27,26 @@ h6:hover{
 	transform: translateX(130%);
 }
 
-.p-4{
-	display: flex;
+.content{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 1120px;
 }
 
-.row{
-	transform: translateX(-50%);
+.col-8{
+	width: 1120px;
+}
+
+.box-carousel{
+	margin-top: 10px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+	border-radius: 15px;
+	padding: 0px;
+}
+
+.carousel-inner{
+	border-radius: 15px;
 }
 
 .card{
@@ -116,92 +55,98 @@ h6:hover{
 	border-radius: 10px;
 }
 
-.card-group{
-	padding-left: 30px;
-	padding-right: 30px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
-.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
-	justify-content: center;
-}
-
-.card-img-overlay:hover>h5{
-	font-size: 32px;
-	color:  red;
-}
-
 .card-img-overlay:hover{
 	cursor:  pointer;
+}
+
+.descricao{
+	font-size: 0px;
+	text-align: center;
+	position: relative;
+	top: 90%;
+	transform: translateY(-115%);
 }
 
 .card-img-overlay:hover>.descricao{
 	font-size: 16px;
 	background-color: black;
 }
-.carousel-inner{
+
+.card-img-overlay:hover>h5{
+	font-size: 32px;
+	color: #C00;
+}
+
+#listaRow1, #listaRow2{
+	text-align: left;
+}
+
+.atributos-itens{
+	margin-left: 10px;
+}
+
+.item-lista{
+	display: flex;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	border-radius: 15px;
 }
 
+.item-lista:hover{
+	background: #EDD;
+	color: #C00;
+}
+
+.imagens-itens{
+	max-width: 170px;
+	max-height: 170px;
+	border-radius: 10px;
+}
+
+.about{
+	text-align: justify;
+}
+
+.footer{
+	display: block;
+	font-size: 20px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+	justify-content: center;
+}
+
 @media only screen and (max-width: 1120px) {
-	.col-8{
+	.content, .col-8{
 		width: 100%;
-		min-width: 0%;
-	}
-
-	.cardapio{
-		padding: 0;
-	}
-	.content{
-		width: 100%
-	}
-
-	.Lista{
-		text-align: left;
-	}
-
-	.item-lista{
-		display: flex;
-		margin: 10px;
-		border-radius: 15px;
-	}
-
-	.item-lista:hover{
-		background: #eee;
-		color: red;
-	}
-
-	.imagens-itens{
-		max-width: 170px;
-		max-height: 170px;
-		border-radius: 15px;
-	}
-
-	.title-itens{
-		width: 180px;
 	}
 
 	.descricao{
 		font-size: 16px;
 		position: unset;
-		top: 20%;
 		transform: translate(0px, 0px);
-	}
-
-	.atributos-itens{
-		margin: 10px;
-	}
-
-	.content:first-child{
-		margin-top: 0px;
+		text-align: justify;
+		margin: 0px;
 	}
 
 	.footer{
 		display: flex;
 	}
-	/*
-	#carousel{
-    	width: 0;
-	}*/
+}
+
+@media only screen and (max-width: 380px) {
+	.item-lista{
+		display: block;
+		text-align: center;
+	}
+
+	.title-itens{
+		margin: 0px;
+	}
+
+	.descricao{
+		text-align: center;
+	}
 }
