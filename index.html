@@ -11,14 +11,15 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/style-index.css">
 	<title>Beco Hamburgueria</title>
+  <link rel="shortcut icon" href="imagens/beco.ico">
 </head>
 <body onresize="mobileTransition()">
 	<div class="collapse" id="navbarToggleExternalContent">
   		<div class="p-4">
-  			<h3><a href="secoes/pedidos.html">Fazer pedido!</a></h3>
-  			<h3><a href="#cardapio">Cardápio</a></h3>
-  			<h3><a href="#combos">Combos</a></h3>
-  			<h3><a href="#quemSomos">Quem Somos?</a></h3>
+  			<h3><a href="secoes/pedidos.html" onclick="recolherNav()">Fazer pedido!</a></h3>
+  			<h3><a href="#cardapio" onclick="recolherNav()">Cardápio</a></h3>
+  			<h3><a href="#combos" onclick="recolherNav()">Combos</a></h3>
+  			<h3><a href="#quemSomos" onclick="recolherNav()">Quem Somos?</a></h3>
   		</div>
 	</div>
 	<nav class="navbar bg-light">
@@ -36,13 +37,13 @@
 				<div id="carousel" class="carousel slide" data-bs-ride="carousel">
   					<div class="carousel-inner">
     					<div class="carousel-item active" data-bs-interval="3000">
-      						<img src="imagens/outdor1.jpg" class="d-block w-100" alt="...">
+      						<img src="imagens/outdor1.jpg" class="d-block w-100" alt="carousel-image-one">
     					</div>
     					<div class="carousel-item" data-bs-interval="3000">
-      						<img src="imagens/outdor2.jpg" class="d-block w-100" alt="...">
+      						<img src="imagens/outdor2.jpg" class="d-block w-100" alt="carousel-image-two">
     					</div>
     					<div class="carousel-item" data-bs-interval="3000">
-      						<img src="imagens/outdor3.jpg" class="d-block w-100" alt="...">
+      						<img src="imagens/outdor3.jpg" class="d-block w-100" alt="carousel-image-three">
     					</div>
   					</div>
 				</div>
@@ -57,21 +58,21 @@
 			<div class="col-8">
 				<div class="card-group" id="cardsRow1">
   					<div class="card text-bg-dark" onclick="irCarrinho(1)">
-    					<img src="imagens/hamburguer1.jpg" class="card-img" alt="...">
+    					<img src="imagens/hamburguer1.jpg" class="card-img" alt="pedido-image-one">
     					<div class="card-img-overlay">
       						<h5 class="card-title">Beco Diagonal</h5>
       						<p class="card-text descricao">Pão preto, Maionese, Frango empanado, Queijo, Bacon, Picles, Cebola e Ketchup</p>
     					</div>
   					</div>
   					<div class="card text-bg-dark" onclick="irCarrinho(2)">
-    					<img src="imagens/hamburguer2.jpg" class="card-img" alt="...">
+    					<img src="imagens/hamburguer2.jpg" class="card-img" alt="pedido-image-two">
     					<div class="card-img-overlay">
       						<h5 class="card-title">Super Burguer</h5>
       						<p class="card-text descricao">Pão cervejinha, Maionese, Alface, Hamburguer, Queijo, Tomate, Cebola e Ketchup</p>
     					</div>
   					</div>
   					<div class="card text-bg-dark" onclick="irCarrinho(3)">
-    					<img src="imagens/hamburguer3.jpg" class="card-img" alt="...">
+    					<img src="imagens/hamburguer3.jpg" class="card-img" alt="pedido-image-three">
     					<div class="card-img-overlay">
       						<h5 class="card-title">Bacon 360</h5>
       						<p class="card-text descricao">Pão, Alface, Ketchup, Hamburguer, Cheddar, Tomate, Picles, Bacon e Cebola</p>
@@ -80,21 +81,21 @@
 				</div>
 				<div id="listaRow1">
   					<div onclick="irCarrinho(1)" class="item-lista">
-    					<img class="imagens-itens" src="imagens/hamburguer1.jpg" alt="...">
+    					<img class="imagens-itens" src="imagens/hamburguer1.jpg" alt="pedido-image-one">
     					<div class="atributos-itens">
     						<h5 class="title-itens">Beco Diagonal</h5>
       						<p class="descricao">Pão preto, Maionese, Frango empanado, Queijo, Bacon, Picles, Cebola e Ketchup</p>
     					</div>
   					</div>
   					<div onclick="irCarrinho(2)" class="item-lista">
-    					<img class="imagens-itens" src="imagens/hamburguer2.jpg" alt="...">
+    					<img class="imagens-itens" src="imagens/hamburguer2.jpg" alt="pedido-image-two">
     					<div class="atributos-itens">
     						<h5 class="title-itens">Super Burguer</h5>
       						<p class="descricao">Pão cervejinha, Maionese, Alface, Hamburguer, Queijo, Tomate, Cebola e Ketchup</p>
     					</div>
   					</div>
   					<div onclick="irCarrinho(3)" class="item-lista">
-    					<img class="imagens-itens" src="imagens/hamburguer3.jpg" alt="...">
+    					<img class="imagens-itens" src="imagens/hamburguer3.jpg" alt="pedido-image-three">
     					<div class="atributos-itens">
       						<h5 class="title-itens">Bacon 360</h5>
       						<p class="descricao">Pão, Alface, Ketchup, Hamburguer, Cheddar, Tomate, Picles, Bacon e Cebola</p>
@@ -112,21 +113,21 @@
 			<div class="col-8">
 				<div class="card-group" id="cardsRow2">
   					<div class="card text-bg-dark" onclick="irCarrinho(4)">
-    					<img src="imagens/combo1.jpg" class="card-img" alt="...">
+    					<img src="imagens/combo1.jpg" class="card-img" alt="pedido-image-for">
     					<div class="card-img-overlay">
       						<h5 class="card-title">Combo Diagonal</h5>
       						<p class="card-text descricao">Hamburguer Beco Diagonal + Refrigerante + Fritas</p>
     					</div>
   					</div>
   					<div class="card text-bg-dark" onclick="irCarrinho(5)">
-    					<img src="imagens/combo2.jpg" class="card-img" alt="...">
+    					<img src="imagens/combo2.jpg" class="card-img" alt="pedido-image-five">
     					<div class="card-img-overlay">
       						<h5 class="card-title">Super Combo</h5>
       						<p class="card-text descricao">Hamburguer Super Burguer + Refrigerante + Fritas</p>
     					</div>
   					</div>
   					<div class="card text-bg-dark" onclick="irCarrinho(6)">
-    					<img src="imagens/combo3.jpg" class="card-img" alt="...">
+    					<img src="imagens/combo3.jpg" class="card-img" alt="pedido-image-six">
     					<div class="card-img-overlay">
       						<h5 class="card-title">Combo 360</h5>
       						<p class="card-text descricao">Hamburguer Bacon 360 + Refrigerante + Fritas</p>
@@ -135,21 +136,21 @@
 				</div>
 				<div id="listaRow2">
   					<div onclick="irCarrinho(4)" class="item-lista">
-    					<img class="imagens-itens" src="imagens/combo1.jpg" alt="...">
+    					<img class="imagens-itens" src="imagens/combo1.jpg" alt="pedido-image-for">
     					<div class="atributos-itens">
     						<h5 class="title-itens">Combo Diagonal</h5>
       						<p class="descricao">Hamburguer Beco Diagonal + Refrigerante + Fritas</p>
     					</div>
   					</div>
   					<div onclick="irCarrinho(5)" class="item-lista">
-    					<img class="imagens-itens" src="imagens/combo2.jpg" alt="...">
+    					<img class="imagens-itens" src="imagens/combo2.jpg" alt="pedido-image-five">
     					<div class="atributos-itens">
     						<h5 class="title-itens">Super Combo</h5>
       						<p class="descricao">Hamburguer Bacon 360 + Refrigerante + Fritas</p>
     					</div>
   					</div>
   					<div onclick="irCarrinho(6)" class="item-lista">
-    					<img class="imagens-itens img-fluid" src="imagens/combo3.jpg" alt="...">
+    					<img class="imagens-itens img-fluid" src="imagens/combo3.jpg" alt="pedido-image-six">
     					<div class="atributos-itens">
       						<h5 class="title-itens">Combo 360</h5>
       						<p class="descricao">Hamburguer Bacon 360 + Refrigerante + Fritas</p>
