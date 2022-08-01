@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<style>@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');</style>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<style>@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');</style>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous" defer></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+	<script src="js/script.js" defer></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/style-index.css">
 	<title>Beco Hamburgueria</title>
 </head>
-<body onresize="removeOculto()">
+<body onresize="mobileTransition()">
 	<div class="collapse" id="navbarToggleExternalContent">
-  		<div class="p-4" onclick="document.getElementById('navbarToggleExternalContent').classList.remove('show')">
-  			<h3 onclick="window.location.href = 'secoes/pedidos.html'">Fazer meu pedido!</h3>
-  			<h3 onclick="window.location.href = '#cdp'">Cardápio</h3>
-  			<h3 onclick="window.location.href = '#cbs'">Combos</h3>
-  			<h3 onclick="window.location.href = '#qsm'">Quem Somos?</h3>
+  		<div class="p-4">
+  			<h3><a href="secoes/pedidos.html">Fazer pedido!</a></h3>
+  			<h3><a href="#cardapio">Cardápio</a></h3>
+  			<h3><a href="#combos">Combos</a></h3>
+  			<h3><a href="#quemSomos">Quem Somos?</a></h3>
   		</div>
 	</div>
 	<nav class="navbar bg-light">
   		<div class="container-fluid">
-    		<h1 class="navbar-brand" id="nomeEmpresa">Beco Hamburgueria</h1>
-    		<h4 onclick="window.location.href = 'secoes/pedidos.html'">Pedir</h4>
+    		<h1 class="navbar-brand" id="nomeHamburgueria">Beco Hamburgueria</h1>
+    		<h4><a href="secoes/pedidos.html">Pedir</a></h4>
 	    	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
       			<span class="navbar-toggler-icon"></span>
     		</button>
   		</div>
 	</nav>
 	<div class="content">
-		<div class="row box">
+		<div class="row box-carousel" id="carouselRow">
 			<div class="col-8">
 				<div id="carousel" class="carousel slide" data-bs-ride="carousel">
   					<div class="carousel-inner">
@@ -49,13 +49,13 @@
 			</div>
 		</div>
 		<div class="row box">
-			<div class="cardapio col-8">
-				<h2 id="cdp">Cardápio</h2>
+			<div class="col-8">
+				<h2 id="cardapio">Cardápio</h2>
 			</div>
 		</div>
 		<div class="row box">
-			<div class="cardapio itens col-8">
-				<div class="card-group" id="ocultar1">
+			<div class="col-8">
+				<div class="card-group" id="cardsRow1">
   					<div class="card text-bg-dark" onclick="irCarrinho(1)">
     					<img src="imagens/hamburguer1.jpg" class="card-img" alt="...">
     					<div class="card-img-overlay">
@@ -78,7 +78,7 @@
     					</div>
   					</div>
 				</div>
-				<div id="ocultar3" class="Lista">
+				<div id="listaRow1">
   					<div onclick="irCarrinho(1)" class="item-lista">
     					<img class="imagens-itens" src="imagens/hamburguer1.jpg" alt="...">
     					<div class="atributos-itens">
@@ -104,13 +104,13 @@
 			</div>
 		</div>
 		<div class="row box">
-			<div class="cardapio col-8">
-				<h5 id="cbs"><b>Combos</b></h5>
+			<div class="col-8">
+				<h2 id="combos">Combos</h2>
 			</div>
 		</div>
 		<div class="row box">
-			<div class="cardapio itens col-8">
-				<div class="card-group" id="ocultar2">
+			<div class="col-8">
+				<div class="card-group" id="cardsRow2">
   					<div class="card text-bg-dark" onclick="irCarrinho(4)">
     					<img src="imagens/combo1.jpg" class="card-img" alt="...">
     					<div class="card-img-overlay">
@@ -133,23 +133,23 @@
     					</div>
   					</div>
 				</div>
-				<div id="ocultar4" class="Lista">
+				<div id="listaRow2">
   					<div onclick="irCarrinho(4)" class="item-lista">
-    					<img class="imagens-itens" src="imagens/hamburguer1.jpg" alt="...">
+    					<img class="imagens-itens" src="imagens/combo1.jpg" alt="...">
     					<div class="atributos-itens">
     						<h5 class="title-itens">Combo Diagonal</h5>
       						<p class="descricao">Hamburguer Beco Diagonal + Refrigerante + Fritas</p>
     					</div>
   					</div>
   					<div onclick="irCarrinho(5)" class="item-lista">
-    					<img class="imagens-itens" src="imagens/hamburguer2.jpg" alt="...">
+    					<img class="imagens-itens" src="imagens/combo2.jpg" alt="...">
     					<div class="atributos-itens">
     						<h5 class="title-itens">Super Combo</h5>
       						<p class="descricao">Hamburguer Bacon 360 + Refrigerante + Fritas</p>
     					</div>
   					</div>
   					<div onclick="irCarrinho(6)" class="item-lista">
-    					<img class="imagens-itens img-fluid" src="imagens/hamburguer3.jpg" alt="...">
+    					<img class="imagens-itens img-fluid" src="imagens/combo3.jpg" alt="...">
     					<div class="atributos-itens">
       						<h5 class="title-itens">Combo 360</h5>
       						<p class="descricao">Hamburguer Bacon 360 + Refrigerante + Fritas</p>
@@ -158,18 +158,15 @@
   				</div>
 			</div>
 		</div>
-		<div class="row box-sobre">
-			<div class="cardapio col-8">
-				<h2 id="qsm">Quem Somos?</h2>
+		<div class="row box">
+			<div class="col-8 about">
+				<h2 id="quemSomos">Quem Somos?</h2>
 				<p>Somos uma Rede Gourmet diferenciada e exclusiva. Trabalhamos apenas com ingredientes de primeira qualidade e alto padrão. Aqui na Beco você irá se deliciar com hambúrgueres suculentos e saborosos, preparados na hora, fresquinhos e de dar água na boca.</p>
 			</div>
 		</div>
 		<div class="row box footer">
-			<h7>Beco Hamburgueria Ltda</h7>
-			<h7>Av. Rodolfo Behr, 1630 - Camobi, Santa Maria - RS, 97105-440</h7>
-			<h7>(55) 99106-9607	</h7>
+			<p>Beco Hamburgueria Ltda - Av. Rodolfo Behr, 1630 - Camobi, Santa Maria - RS, 97105-440 - (55) 99106-9607</p>
 		</div>
 	</div>
-	<script src="js/script.js"></script>
 </body>
 </html>
