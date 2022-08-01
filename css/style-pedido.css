@@ -8,55 +8,88 @@ h4{
 	transform: translateX(130%);
 }
 
-.dados,.pedidos{
-	background:  #fff;
-	border: 1px solid black;
+label, input, td, th{
+	font-size: 20px;
+}
+
+.box{
+	background: #F8F9FA;
+}
+
+.content{
+	max-width: 1120px;
+	width: 100%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.dados{
 	text-align: left;
-	padding: 10px;
-	margin: 5px;
-	border-radius: 10px;
+	width: 54.5%;
 }
 
 .pedidos{
-	min-width: 322px;
+	text-align: left;
+	width: 44.5%;
+	margin-left: 1%;
 }
 
 .pedidos>button{
 	position: relative;
 	top: 45%;
-	left: 50%;
+	left: 100%;
+	transform: translateX(-100%);
 }
 
-.btn-qtde{
+.div-quantidade{
 	position: relative;
-	top: 50px;
+	top: 50%;
 	width: 100px;
 	text-align: center;
 	font-size: 20px;
 }
 
-.btn-qtde-btn{
+.btn-quantidade{
 	background: #DC3545;
 	color: white;
 	height: 33px;
+	width: 33px;
 	border-radius: 10px;
 }
 
-.btn-qtde-btn:hover{
+.btn-quantidade:hover{
 	background: #AC3545;
 	cursor: pointer;
 }
 
-.navbar-brand{
-	font-size: 40px;
-	font-family: 'Patrick Hand SC', sans-serif;
+.col-9{
+	width: 66.66666667%;
 }
 
-.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
-	justify-content: center;
+.col-3{
+	width: 33.33333333%;
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 367px) {
+	.col-9, .col-3{
+		width: 100%;
+	}
+
+	.div-quantidade{
+		width: 99px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+@media only screen and (max-width: 750px) {
+	.pedidos{
+		margin-left: 0px;
+	}
+	.dados, .pedidos{
+		width: 100%;
+	}
 	.pedidos>button{
 		top: 0%;
 		left: 100%;
