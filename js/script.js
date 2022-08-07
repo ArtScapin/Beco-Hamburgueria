@@ -123,9 +123,11 @@ if (arquivo === 'index') {
 	}	
 
 	function descontoSurpresa(){
-		alert('PARABÉNS!!!\nVOCÊ ENCONTROU O NOSSO DESCONTO SURPRESA\n\nUm desconto de 10% foi adicionado ao seu pedido!');
-		valorDesconto = 1;
-		atualizarPedido(opAtual);
+		if (valorDesconto == 0 ) {
+			alert('PARABÉNS!!!\nVOCÊ ENCONTROU O NOSSO DESCONTO SURPRESA\n\nUm desconto de 10% foi adicionado ao seu pedido!');
+			valorDesconto = 1;
+			atualizarPedido(opAtual);
+		}
 	}
 }
 
