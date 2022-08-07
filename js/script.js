@@ -13,11 +13,15 @@ if (arquivo === 'index') {
 			$("#cardsRow2").hide();
 			$("#listaRow1").show();
 			$("#listaRow2").show();
+			document.getElementsByName('quebraLinha')[0].innerHTML = '</p><p>';
+			document.getElementsByName('quebraLinha')[1].innerHTML = '</p><p>';
 		}else{
 			$("#cardsRow1").show();
 			$("#cardsRow2").show();
 			$("#listaRow1").hide();
 			$("#listaRow2").hide();
+			document.getElementsByName('quebraLinha')[0].innerHTML = '&emsp;&emsp;&emsp;&emsp;';
+			document.getElementsByName('quebraLinha')[1].innerHTML = '&emsp;&emsp;&emsp;&emsp;';
 		}
 		if(innerWidth<=650){
 			$("#carouselRow").hide();
@@ -35,10 +39,13 @@ if (arquivo === 'index') {
 		$("#navbarToggleExternalContent").removeClass("show");
 	}
 
+
 }else if (arquivo === 'pedidos'){
 	const urlParams = new URLSearchParams(window.location.search);
 	let pedido = typeof(urlParams.get('opcao')) !== 'string' ? 1 : urlParams.get('opcao');
-	let valor = 0;
+	let valor;
+	let subtotal;
+	let valorDesconto = 0;
 	let quantidade = 1;
 	let opAtual = 1;
 
@@ -76,12 +83,17 @@ if (arquivo === 'index') {
 		document.getElementById("pedido"+String(opAtual)).checked=true;
 		document.getElementById("valor_burguer").innerHTML = "R$"+String(valor)+",00"; 
 		document.getElementById("qtde_burguer").innerHTML=String(quantidade);
-		document.getElementById("subtotal").innerHTML = "R$"+String(valor*quantidade)+",00"; 
-		document.getElementById("total").innerHTML = "R$"+String(valor*quantidade)+",00";
+		subtotal = valor * quantidade;
+		document.getElementById("subtotal").innerHTML = "R$"+String(subtotal)+",00";
+		if (valorDesconto > 0)
+			valorDesconto = parseInt(subtotal/10);
+		document.getElementById("desconto").innerHTML = "-R$"+String(valorDesconto)+",00";
+		total = subtotal - valorDesconto;
+		document.getElementById("total").innerHTML = "R$"+String(total)+",00";
 	}
 
 	function atualizarQtde(incremento){
-		if((parseInt(quantidade)+parseInt(incremento))>=0){
+		if((parseInt(quantidade)+parseInt(incremento))>0){
 			quantidade=parseInt(quantidade)+parseInt(incremento);
 			atualizarPedido(opAtual);
 			document.getElementById("qtde").innerHTML = quantidade;
@@ -109,6 +121,12 @@ if (arquivo === 'index') {
 				alert('Você esqueceu de nos dizer seus dados para a entrega!');
 		}
 	}	
+
+	function descontoSurpresa(){
+		alert('PARABÉNS!!!\nVOCÊ ENCONTROU O NOSSO DESCONTO SURPRESA\n\nUm desconto de 10% foi adicionado ao seu pedido!');
+		valorDesconto = 1;
+		atualizarPedido(opAtual);
+	}
 }
 
 function alterarNome(){
