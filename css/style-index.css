@@ -90,6 +90,7 @@ p{
 	margin-top: 10px;
 	margin-bottom: 10px;
 	border-radius: 15px;
+	cursor: pointer;
 }
 
 .item-lista:hover{
